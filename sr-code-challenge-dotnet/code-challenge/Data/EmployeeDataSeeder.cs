@@ -28,6 +28,14 @@ namespace challenge.Data
             }
         }
 
+        public List<Employee> PublicLoad()
+        {
+            List<Employee> employees = LoadEmployees();
+
+            return employees;
+        }
+
+
         private List<Employee> LoadEmployees()
         {
             using (FileStream fs = new FileStream(EMPLOYEE_SEED_DATA_FILE, FileMode.Open))
@@ -44,6 +52,9 @@ namespace challenge.Data
                 
                 // List<Employee> testList = rs.structBasedOffID(employees[0].EmployeeId);
                 rs.getReportingStructure(employees[0]);
+                //List<Employee> rsReturn = rs.structBasedOffEmployee(employees[0]);
+                //employees[0].ReportingStructureLToR = rsReturn;
+                // rs.Employee.ReportingStructure = rs.structBasedOffEmployee(employees[0]);
                 // List<Employee> rsReturn = rs.structBasedOffEmployee(employees[0]);
                 return employees;
             }

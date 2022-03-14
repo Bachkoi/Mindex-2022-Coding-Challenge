@@ -14,15 +14,51 @@ namespace challenge.Models
 
         private string effectiveDate;
 
+        // Default constructor for Compensation objs, it will
+        // create and assign blank or null values for the time being.
         public Compensation()
         {
-            
+            // Create a base compensation object with blank values.
+            this.emp = new Employee();
+            this.salary = 0.0;
+            this.effectiveDate = "";
         }
-        public Compensation(String employeeId)
+
+
+
+        // Compensation parameterized constructor based off of 
+        // the employeeID passed in as a parameter.
+        // From here, it will create the compensation based off of that 
+        // employee's data.
+        public Compensation(Employee employeeId)
         {
             // Get Employee based off of employeeID
-            // emp = getByID(employeeId);
-            // 
+            // this.emp = getByID(employeeId);
+            // this.salary = this.emp.salary;
+            // this.effectiveDate = this.emp.effectiveDate;
         }
+
+        // Default constructor for Compensation objs, it will
+        // create and assign blank or null values for the time being.
+        public Compensation(Employee employeeId, double inputSalary, string inputEffectiveDate)
+        {
+            // Create a base compensation object with blank values.
+            this.emp = employeeId;
+            this.salary = inputSalary;
+            this.effectiveDate = inputEffectiveDate;
+        }
+
+        public Compensation GetCompensation(Employee employeeId)
+        {
+            if(employeeId.EmployeeId == this.emp.EmployeeId)
+            {
+                return this;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
     }
 }

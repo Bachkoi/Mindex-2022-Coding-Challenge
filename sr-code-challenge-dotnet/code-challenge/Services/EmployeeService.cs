@@ -40,6 +40,13 @@ namespace challenge.Services
             return null;
         }
 
+        public List<Employee> Pass()
+        {
+
+            return _employeeRepository.SeedStructured();
+            
+        }
+
         public Employee Replace(Employee originalEmployee, Employee newEmployee)
         {
             if(originalEmployee != null)

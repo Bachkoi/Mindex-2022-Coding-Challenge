@@ -1,6 +1,8 @@
 ﻿using challenge.Models;
 using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+
 
 namespace challenge.Repositories
 {
@@ -10,5 +12,7 @@ namespace challenge.Repositories
         Employee Add(Employee employee);
         Employee Remove(Employee employee);
         Task SaveAsync();
+        List<Employee> SeedStructured();
+
     }
 }

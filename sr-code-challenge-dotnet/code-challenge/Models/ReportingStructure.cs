@@ -63,6 +63,7 @@ namespace challenge.Models
         /// ReportingStructure list, which holds the employee structure that is being sought in Task 1. In the debug log, you will see if a name appears 2 times (i.e Ringo) it means
         /// it is the parent of the ones following it.
         /// <returns></returns>
+        
         public int getReportingStructure(Employee emp) // Gets and returns the number, and buidls the reporting structure, but not based off the ID of the employee.
         {
             Debug.Write(emp.FirstName);
@@ -78,6 +79,7 @@ namespace challenge.Models
                         if (empReporter.DirectReports != null)
                         {
                             Debug.Write(empReporter.FirstName);
+                            //emp.ReportingStructure.Add(empReporter);
                             emp.NumberOfReports += getReportingStructure(empReporter);
                             // emp.NumberOfReports += getReportingStructure(empReporter);
                         }
@@ -163,17 +165,21 @@ namespace challenge.Models
             if (emp.DirectReports != null)
             {
                 List<Employee> empsReporters = emp.DirectReports.ToList();
-                foreach (Employee empReporter in empsReporters)
+                for(int i = 0; i < empsReporters.Count; i++)
                 {
+                    if(i >= emp.DirectReports.Count)
+                    {
+                        return emp.ReportingStructureLToR;
+                    }
                     // emp.ReportingStructure = empsReporters;
                     emp.ReportingStructureLToR = empsReporters;
                     emp.NumberOfReports++;
-                    if (empReporter.DirectReports != null)
+                    if (emp.DirectReports[i].DirectReports != null)
                     {
-                        for (int i = 0; i < empReporter.DirectReports.Count; i++)
+                        for (int j = 0; j < emp.DirectReports[i].DirectReports.Count; j++)
                         {
                             //Debug.Write(emp.DirectReports[i].FirstName);
-                            emp.ReportingStructureLToR.Add(empReporter.DirectReports[i]);
+                            emp.ReportingStructureLToR.Add(emp.DirectReports[i].DirectReports[j]);
                         }
                         Debug.WriteLine("_");
                         // emp.ReportingStructureLToR.AddRange(structBasedOffEmployee(empReporter));
@@ -189,6 +195,32 @@ namespace challenge.Models
                         // numberOfReports += getReportingStructure(empReporter);
                     }
                 }
+                //foreach (Employee empReporter in empsReporters)
+                //{
+                //    // emp.ReportingStructure = empsReporters;
+                //    emp.ReportingStructureLToR = empsReporters;
+                //    emp.NumberOfReports++;
+                //    if (empReporter.DirectReports != null)
+                //    {
+                //        for (int i = 0; i < empReporter.DirectReports.Count; i++)
+                //        {
+                //            //Debug.Write(emp.DirectReports[i].FirstName);
+                //            emp.ReportingStructureLToR.Add(empReporter.DirectReports[i]);
+                //        }
+                //        Debug.WriteLine("_");
+                //        // emp.ReportingStructureLToR.AddRange(structBasedOffEmployee(empReporter));
+                //    }
+                //    else
+                //    {
+                //        // for(int i = 0; i < empReporter.DirectReports.Count; i++)
+                //        // {
+                //        //     Console.Write(empReporter.FirstName);
+                //        // 
+                //        // }
+                //        // Console.WriteLine();
+                //        // numberOfReports += getReportingStructure(empReporter);
+                //    }
+                //}
             }
             list = emp.ReportingStructureLToR;
             return list;

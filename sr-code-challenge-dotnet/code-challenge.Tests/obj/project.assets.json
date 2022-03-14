@@ -14266,25 +14266,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sambe\\.nuget\\packages\\": {},
+    "C:\\Users\\baldw\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sambe\\Downloads\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj",
+      "projectUniqueName": "C:\\Users\\baldw\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj",
       "projectName": "code-challenge.Tests.Integration",
-      "projectPath": "C:\\Users\\sambe\\Downloads\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj",
-      "packagesPath": "C:\\Users\\sambe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sambe\\Downloads\\sr-code-challenge-dotnet\\code-challenge.Tests\\obj\\",
+      "projectPath": "C:\\Users\\baldw\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj",
+      "packagesPath": "C:\\Users\\baldw\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\baldw\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\sambe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\baldw\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -14299,8 +14299,8 @@
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "projectReferences": {
-            "C:\\Users\\sambe\\Downloads\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj": {
-              "projectPath": "C:\\Users\\sambe\\Downloads\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj"
+            "C:\\Users\\baldw\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj": {
+              "projectPath": "C:\\Users\\baldw\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj"
             }
           }
         }
@@ -14348,7 +14348,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

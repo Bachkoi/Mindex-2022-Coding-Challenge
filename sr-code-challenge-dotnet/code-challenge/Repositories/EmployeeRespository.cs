@@ -26,6 +26,12 @@ namespace challenge.Repositories
             _employeeContext.Employees.Add(employee);
             return employee;
         }
+        public List<Employee> SeedStructured()
+        {
+            EmployeeDataSeeder empDS = new EmployeeDataSeeder(_employeeContext);
+            List<Employee> test = empDS.PublicLoad();
+            return test;
+        }
 
         public Employee GetById(string id)
         {
