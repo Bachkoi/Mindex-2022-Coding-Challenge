@@ -38,6 +38,17 @@ namespace challenge.Repositories
             return _employeeContext.Employees.SingleOrDefault(e => e.EmployeeId == id);
         }
 
+        public Compensation CompensationGetById(string id)
+        {
+            // return _employeeContext.Compensations.SingleOrDefault(e => e.Employee.EmployeeId == id); // gets a 204 error
+            Compensation comp = _employeeContext.Compensations.SingleOrDefault(e => e.CompensationEmployeesID == id);
+            comp.Employee = GetById(id);
+            return comp; // When I do this it returns the salary, effective data, and an empty EMployee
+
+            // return _employeeContext.Compensations.SingleOrDefault(e => e.CompensationEmployeesID == id); // When I do this it returns the salary, effective data, and an empty EMployee
+
+        }
+
         public Task SaveAsync()
         {
             return _employeeContext.SaveChangesAsync();
@@ -46,6 +57,13 @@ namespace challenge.Repositories
         public Employee Remove(Employee employee)
         {
             return _employeeContext.Remove(employee).Entity;
+        }
+
+        public Compensation Add(Compensation comp)
+        {
+            comp.Employee.EmployeeId = Guid.NewGuid().ToString();
+             _employeeContext.Compensations.Add(comp);
+            return comp;
         }
     }
 }

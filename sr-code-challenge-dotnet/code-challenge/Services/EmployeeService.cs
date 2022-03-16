@@ -30,11 +30,35 @@ namespace challenge.Services
             return employee;
         }
 
+        public Compensation CreateComp(Compensation comp)
+        {
+            if (comp != null)
+            {
+                _employeeRepository.Add(comp.Employee);
+                _employeeRepository.Add(comp);
+                _employeeRepository.SaveAsync().Wait();
+            }
+
+            return comp;
+        }
+
         public Employee GetById(string id)
         {
             if(!String.IsNullOrEmpty(id))
             {
                 return _employeeRepository.GetById(id);
+            }
+
+            return null;
+        }
+
+        public Compensation CompensationGetById(string id)
+        {
+            if (!String.IsNullOrEmpty(id))
+            {
+                //Employee tempEmp = _employeeRepository.GetById(id);
+
+                return _employeeRepository.CompensationGetById(id);
             }
 
             return null;

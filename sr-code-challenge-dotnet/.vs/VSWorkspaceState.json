@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\code-challenge",
+    "\\code-challenge\\Controllers"
   ],
-  "SelectedNode": "\\code-challenge.sln",
+  "SelectedNode": "\\code-challenge\\Controllers\\EmployeeController.cs",
   "PreviewInSolutionExplorer": false
 }

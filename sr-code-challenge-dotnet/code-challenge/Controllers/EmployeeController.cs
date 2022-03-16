@@ -33,7 +33,10 @@ namespace challenge.Controllers
             return CreatedAtRoute("getEmployeeById", new { id = employee.EmployeeId }, employee);
         }
         // [ActionName("employee")]
-        [HttpGet("{id}", Name = "getEmployeeById")]
+
+        //[HttpGet("{id}", Name = "getEmployeeById")]
+        [HttpGet]
+        [Route("{id}")]
         public IActionResult GetEmployeeById(String id)
         {
             // _employeeService.Pass();
@@ -61,6 +64,7 @@ namespace challenge.Controllers
 
             return Ok(newEmployee);
         }
+
         //[HttpGet("{id}/{position}", Name = "ReadDirectingStructure")]
         //public IActionResult ReadDirectingStructure(string id, string position)
         //{
@@ -88,7 +92,7 @@ namespace challenge.Controllers
         //            if (i >= structEmp.DirectReports.Count)
         //            {
         //                return Ok(structEmp.ReportingStructureLToR);
-        //            }
+        //           }
         //            structEmp.ReportingStructureLToR = (empsReporters);
         //            structEmp.NumberOfReports++;
         //            if (structEmp.DirectReports[i].DirectReports != null)
@@ -96,8 +100,7 @@ namespace challenge.Controllers
         //                for (int j = 0; j < structEmp.DirectReports[i].DirectReports.Count; j++)
         //                {
         //                    structEmp.ReportingStructureLToR.Add(structEmp.DirectReports[i].DirectReports[j]);
-
-        //                }
+        //                       }
         //                Debug.WriteLine("_");
         //                //structEmp.ReportingStructureLToR.AddRange(empReporter.DirectReports);
         //            }
@@ -143,29 +146,41 @@ namespace challenge.Controllers
         //    return Ok(list);
         //}
 
-        // Compensation ENDPOINT1 to create the compensation endpoint
-        [HttpPost("{id}/{salary}/{effectiveDate}", Name = "PostCompensation")] // For some reason the request does not match any routes
-        public IActionResult PostCompensation(string id, double salary, string effectiveDate)
-        {
-            Employee tempEmp = _employeeService.GetById(id);
-            Compensation comp = new Compensation(tempEmp, salary, effectiveDate);
+        //// Compensation ENDPOINT1 to create the compensation endpoint
+        ////[HttpPost("{id}/{salary}/{effectiveDate}", Name = "PostCompensation")] // For some reason the request does not match any routes
+        //[HttpPost]
+        //[Route("{id}/{salary}/{effectiveDate}")]
+        //public IActionResult PostCompensation(string id, double salary, string effectiveDate)
+        //{
+        //    Employee tempEmp = _employeeService.GetById(id);
+        //    Compensation comp = new Compensation(tempEmp, salary, effectiveDate);
+        //    _employeeService.CreateComp(comp);
+        //    //return CreatedAtRoute("PostCompensation", new { tempEmp, salary = salary, effectiveDate = effectiveDate }, tempEmp);
+        //    Debug.WriteLine(Ok(comp));
 
-            //return CreatedAtRoute("PostCompensation", new { tempEmp, salary = salary, effectiveDate = effectiveDate }, tempEmp);
-             return Ok(comp);
-            // return CreatedAtRoute("PostCompensation", new { id = employee.EmployeeId }, employee);
-            // return CreatedAtRoute("getEmployeeById", new { id = employee.EmployeeId }, employee);
 
-        }
 
-        // Compensation Endpoint2 to read by EmployeeID
-        [HttpGet("{id}/{salary}", Name = "ReadCompensation")]
-        public IActionResult ReadCompensation(string id, double salary)
-        {
-            Employee tempEmp = _employeeService.GetById(id);
-            Compensation comp = new Compensation(tempEmp, salary, "March5");
-            Debug.WriteLine(comp);
+        //    return Ok(comp);
+        //    // return CreatedAtRoute("PostCompensation", new { id = employee.EmployeeId }, employee);
+        //    // return CreatedAtRoute("getEmployeeById", new { id = employee.EmployeeId }, employee);
 
-            return Ok(comp);
-        }
+        //}
+
+        //// Compensation Endpoint2 to read by EmployeeID
+        ////[HttpGet("{id}/{salary}", Name = "ReadCompensation")]
+        //[HttpGet]
+        //[Route("{id}/{salary}")]
+
+        //public IActionResult ReadCompensation(string id, double salary)
+        //{
+        //    Employee tempEmp = _employeeService.GetById(id);
+        //    Compensation comp = new Compensation(tempEmp, salary, "March5");
+        //    // Should be get comp
+        //    _employeeService.CreateComp(comp);
+        //    Debug.WriteLine(Ok(comp));
+        //    Debug.WriteLine(comp);
+
+        //    return Ok(comp);
+        //}
     }
 }

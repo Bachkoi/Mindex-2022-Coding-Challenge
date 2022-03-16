@@ -26,6 +26,16 @@ namespace challenge.Data
 
                 await _employeeContext.SaveChangesAsync();
             }
+
+            if (!_employeeContext.Compensations.Any())
+            {
+                Employee emp = new Employee();
+                List<Compensation> compensations = new List<Compensation>(); 
+                compensations.Add(new Compensation(emp, 60000, "March5th"));
+                _employeeContext.Compensations.AddRange(compensations);
+
+                await _employeeContext.SaveChangesAsync();
+            }
         }
 
         public List<Employee> PublicLoad()
