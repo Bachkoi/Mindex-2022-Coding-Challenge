@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj": {}
+    "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj": {
+    "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj",
+        "projectUniqueName": "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj",
         "projectName": "code-challenge.Tests.Integration",
-        "projectPath": "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj",
-        "packagesPath": "C:\\Users\\sbb7355\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\obj\\",
+        "projectPath": "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\code-challenge.Tests.Integration.csproj",
+        "packagesPath": "C:\\Users\\sambe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sbb7355\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sambe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -34,8 +33,8 @@
           "netcoreapp2.1": {
             "targetAlias": "netcoreapp2.1",
             "projectReferences": {
-              "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj": {
-                "projectPath": "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj"
+              "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj": {
+                "projectPath": "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj"
               }
             }
           }
@@ -83,28 +82,27 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj": {
+    "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj",
+        "projectUniqueName": "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj",
         "projectName": "code-challenge",
-        "projectPath": "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj",
-        "packagesPath": "C:\\Users\\sbb7355\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sbb7355\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\obj\\",
+        "projectPath": "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\code-challenge.csproj",
+        "packagesPath": "C:\\Users\\sambe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sambe\\Documents\\GitHub\\Mindex-2022-Coding-Challenge\\sr-code-challenge-dotnet\\code-challenge\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sbb7355\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sambe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -158,7 +156,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

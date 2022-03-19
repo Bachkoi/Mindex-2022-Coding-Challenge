@@ -57,45 +57,12 @@ namespace challenge.Controllers
                             structEmp.ReportingStructureLToR.Add(structEmp.DirectReports[i].DirectReports[j]);
                                }
                         Debug.WriteLine("_");
-                        //structEmp.ReportingStructureLToR.AddRange(empReporter.DirectReports);
                     }
                     else
                     {
-                        // for(int i = 0; i < empReporter.DirectReports.Count; i++)
-                        // {
-                        //     Console.Write(empReporter.FirstName);
-                        // 
-                        // }
-                        // Console.WriteLine();
-                        // numberOfReports += getReportingStructure(empReporter);
                     }
                 }
             }
-
-            //if (structEmp.DirectReports != null) // Right now, it is null bc empDS hasn't connected them yet.
-            //{
-            //    List<Employee> empsReporters = structEmp.DirectReports.ToList();
-            //    foreach (Employee empReporter in empsReporters)
-            //    {
-            //        structEmp.ReportingStructureLToR = empsReporters;
-            //        structEmp.NumberOfReports++;
-            //        if (empReporter.DirectReports != null)
-            //        {
-            //            structEmp.ReportingStructureLToR.AddRange(empReporter.DirectReports);
-            //            ReadDirectingStructure(empReporter.EmployeeId);
-            //        }
-            //        else
-            //        {
-            //            // for(int i = 0; i < empReporter.DirectReports.Count; i++)
-            //            // {
-            //            //     Console.Write(empReporter.FirstName);
-            //            // 
-            //            // }
-            //            // Console.WriteLine();
-            //            // numberOfReports += getReportingStructure(empReporter);
-            //        }
-            //    }
-            //}
             list = structEmp.ReportingStructureLToR;
             Debug.WriteLine(list);
             return Ok(list);

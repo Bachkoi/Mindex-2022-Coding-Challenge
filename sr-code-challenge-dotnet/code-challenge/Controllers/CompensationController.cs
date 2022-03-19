@@ -21,6 +21,12 @@ namespace challenge.Controllers
             _logger = logger;
             _employeeService = employeeService;
         }
+        [HttpGet]
+        [Route("post/call/{id}")] // Using this in the same sense as a curl to get to the post
+        public IActionResult GetPostCompensation(string id)
+        {
+            return PostCompensation(id);
+        }
         // Compensation ENDPOINT1 to create the compensation endpoint
         //[HttpPost("{id}/{salary}/{effectiveDate}", Name = "PostCompensation")] // For some reason the request does not match any routes
         [HttpPost]
@@ -47,15 +53,10 @@ namespace challenge.Controllers
             comp.EffectiveDate = potentialDates[rng.Next(0,potentialDates.Length)];
 
             _employeeService.CreateComp(comp);
-            //return CreatedAtRoute("PostCompensation", new { tempEmp, salary = salary, effectiveDate = effectiveDate }, tempEmp);
             Debug.WriteLine(Ok(comp));
 
 
             return CreatedAtRoute("ReadCompensation", new { id = comp.Employee.EmployeeId }, comp);
-            // return Ok(comp);
-            // return CreatedAtRoute("PostCompensation", new { id = employee.EmployeeId }, employee);
-            // return CreatedAtRoute("getEmployeeById", new { id = employee.EmployeeId }, employee);
-
         }
 
         // Compensation Endpoint2 to read by EmployeeID
