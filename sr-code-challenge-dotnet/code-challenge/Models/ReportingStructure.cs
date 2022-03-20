@@ -88,32 +88,7 @@ namespace challenge.Models
                             Debug.Write(empReporter.FirstName);
 
                         }
-                        //if (emp.DirectReports != null)
-                        //{
-                        //    // Debug.Write(emp.FirstName);
-                        //    for (int i = 0; i < emp.DirectReports.Count; i++)
-                        //    {
-                        //        Debug.Write(emp.DirectReports[i].FirstName);
-                        //        if (emp.DirectReports[i].DirectReports != null)
-                        //        {
-                        //            // Debug.Write(emp.DirectReports[i].FirstName);
-                        //            emp.NumberOfReports += getReportingStructure(empReporter);
-                        //        }
 
-                        //    }
-                        //    Debug.WriteLine("_");
-                        //    // emp.NumberOfReports += getReportingStructure(empReporter);
-                        //}
-                        //else
-                        //{
-                        // for(int i = 0; i < empReporter.DirectReports.Count; i++)
-                        // {
-                        //     Console.Write(empReporter.FirstName);
-                        // 
-                        // }
-                        // Console.WriteLine();
-                        // numberOfReports += getReportingStructure(empReporter);
-                        // }
                     }
                 }
                 Debug.WriteLine(emp.NumberOfReports);
@@ -145,13 +120,7 @@ namespace challenge.Models
                     }
                     else
                     {
-                        // for(int i = 0; i < empReporter.DirectReports.Count; i++)
-                        // {
-                        //     Console.Write(empReporter.FirstName);
-                        // 
-                        // }
-                        // Console.WriteLine();
-                        // numberOfReports += getReportingStructure(empReporter);
+
                     }
                 }
             }
@@ -186,68 +155,13 @@ namespace challenge.Models
                     }
                     else
                     {
-                        // for(int i = 0; i < empReporter.DirectReports.Count; i++)
-                        // {
-                        //     Console.Write(empReporter.FirstName);
-                        // 
-                        // }
-                        // Console.WriteLine();
-                        // numberOfReports += getReportingStructure(empReporter);
+
                     }
                 }
-                //foreach (Employee empReporter in empsReporters)
-                //{
-                //    // emp.ReportingStructure = empsReporters;
-                //    emp.ReportingStructureLToR = empsReporters;
-                //    emp.NumberOfReports++;
-                //    if (empReporter.DirectReports != null)
-                //    {
-                //        for (int i = 0; i < empReporter.DirectReports.Count; i++)
-                //        {
-                //            //Debug.Write(emp.DirectReports[i].FirstName);
-                //            emp.ReportingStructureLToR.Add(empReporter.DirectReports[i]);
-                //        }
-                //        Debug.WriteLine("_");
-                //        // emp.ReportingStructureLToR.AddRange(structBasedOffEmployee(empReporter));
-                //    }
-                //    else
-                //    {
-                //        // for(int i = 0; i < empReporter.DirectReports.Count; i++)
-                //        // {
-                //        //     Console.Write(empReporter.FirstName);
-                //        // 
-                //        // }
-                //        // Console.WriteLine();
-                //        // numberOfReports += getReportingStructure(empReporter);
-                //    }
-                //}
+
             }
             list = emp.ReportingStructureLToR;
             return list;
         }
-
-
-        //public int getReportingStructure(Employee emp)
-        //{
-        //    if(emp.DirectReports != null)
-        //    {
-        //        List<Employee> empsReporters = emp.DirectReports.ToList();
-        //        foreach(Employee empReporter in empsReporters)
-        //        {
-        //            emp.ReportingStructure = empsReporters;
-        //            NumberOfReports++;
-        //            if(empReporter.DirectReports.Count <= 0)
-        //            {
-        //                // break;
-        //            }
-        //            else
-        //            {
-        //                NumberOfReports += getReportingStructure(empReporter);
-        //            }
-        //        }
-        //    }
-        //    Console.WriteLine(NumberOfReports);
-        //    return numberOfReports;
-        //}
     }
 }

@@ -20,10 +20,22 @@ namespace challenge.Controllers
             _logger = logger;
             _employeeService = employeeService;
         }
+
+        /// <summary>
+        /// ReadDirectingStructure
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>
+        /// This method is the way in which the user is able to actually see the directingStructure of the employee based off of the passed in ID
+        /// that matches the empoloyees ID. This method will create a new Reporting Structure object and then to determine what employee is for that
+        /// Reporting Structure obj, we will use a for loop to match the employeeIds. Then we will check to see if that employee's DirectReports are null,
+        ///  and if they arent then we will continue to make their DirectReports to a list then check to see if they and their "descendents" have directly 
+        ///  reporting subbordinates, and if they do, then add it to the list and increment the count.
+        /// </returns>
         [HttpGet("{id}", Name = "ReadDirectingStructure")]
         public IActionResult ReadDirectingStructure(string id)
         {
-            List<Employee> empList = _employeeService.Pass();
+            List<Employee> empList = _employeeService.Pass(); // To get the employees from the repo
             ReportingStructure rs = new ReportingStructure();
             for(int i = 0; i < empList.Count; i++)
             {
@@ -33,11 +45,10 @@ namespace challenge.Controllers
                 }
             }
             //rs.Employee = _employeeService.GetById(id);
-            Debug.WriteLine(rs.Employee);
-            Debug.WriteLine(id);
+            //Debug.WriteLine(rs.Employee); Used to debug and read it in the console. 
+            //Debug.WriteLine(id);
             List<Employee> list = new List<Employee>();
-            //Employee structEmp = _employeeService.GetById(id); // Doesn't work becasue I can't get the Repo working
-            Employee structEmp = rs.Employee; // Doesn't work becasue I can't get the Repo working
+            Employee structEmp = rs.Employee; 
             Debug.WriteLine(structEmp);
             if (structEmp.DirectReports != null)
             {

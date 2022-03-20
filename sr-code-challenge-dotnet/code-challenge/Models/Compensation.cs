@@ -12,24 +12,25 @@ namespace challenge.Models
         [Key]
         public string CompensationEmployeesID { get; set; }
 
-        public Employee CompensationEmp { get; set; }
+        //public Employee CompensationEmp { get; set; }
         
 
         private double Compensationsalary { get; set; }
 
         
         private string CompensationeffectiveDate { get; set; }
+        private Employee emp;
 
         public Employee Employee
         {
             get
             {
-                return CompensationEmp;
+                return emp;
             }
 
             set
             {
-                CompensationEmp = value;
+                emp = value;
             }
             
         }
@@ -64,7 +65,7 @@ namespace challenge.Models
         public Compensation()
         {
             // Create a base compensation object with blank values.
-            this.CompensationEmp = new Employee();
+            this.Employee = new Employee();
             this.Compensationsalary = 0.0;
             this.CompensationeffectiveDate = "";
         }
@@ -88,14 +89,14 @@ namespace challenge.Models
         public Compensation(Employee employeeId, double inputSalary, string inputEffectiveDate)
         {
             // Create a base compensation object with blank values.
-            this.CompensationEmp = employeeId;
+            this.Employee = employeeId;
             this.Compensationsalary = inputSalary;
             this.CompensationeffectiveDate = inputEffectiveDate;
         }
 
         public Compensation GetCompensation(Employee employeeId)
         {
-            if(employeeId.EmployeeId == this.CompensationEmp.EmployeeId)
+            if(employeeId.EmployeeId == this.Employee.EmployeeId)
             {
                 return this;
             }

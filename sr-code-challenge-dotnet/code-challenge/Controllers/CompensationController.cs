@@ -28,20 +28,18 @@ namespace challenge.Controllers
             return PostCompensation(id);
         }
         // Compensation ENDPOINT1 to create the compensation endpoint
-        //[HttpPost("{id}/{salary}/{effectiveDate}", Name = "PostCompensation")] // For some reason the request does not match any routes
+        
+        // Takes in a paramter of a string ID, then it creates a temporary employee variable
+        // using the employee service's method GetByID. Then it creates a new compensation,
+        // sets the compensation's employee to the temp variable, sets its employeeID to the id
+        // then it randomly sets a salary and chooses a random date from the potential dates. Then it 
+        // creates the compensation variable and returns what that compensation looks like.
         [HttpPost]
         [Route("post/{id}")]
-        // [Route("{id}/{salary}/{effectiveDate}")]
-        //public IActionResult PostCompensation(string id, double salary, string effectiveDate)
-        //public IActionResult PostCompensation(string id, double salary, string effectiveDate)
 
         public IActionResult PostCompensation(string id)
         {
-            //Employee tempEmp = pComp.CompensationEmp;
             Employee tempEmp = _employeeService.GetById(id);
-            //double tempSal = pComp.Salary;
-            //string tempEff = pComp.EffectiveDate;
-            // Compensation comp = new Compensation(tempEmp, salary, effectiveDate);
             Compensation comp = new Compensation();
             comp.Employee = tempEmp;
             comp.Employee.EmployeeId = id;
@@ -66,12 +64,9 @@ namespace challenge.Controllers
 
         public IActionResult ReadCompensation(string id)
         {
-            //Employee tempEmp = _employeeService.GetById(id);
-            //Compensation comp = new Compensation(tempEmp, salary, "March5");
-            // Should be get comp
-            Compensation comp = _employeeService.CompensationGetById(id);
-            //_employeeService.CreateComp(comp);
-            Debug.WriteLine(Ok(comp));
+
+            Compensation comp = _employeeService.CompensationGetById(id); // Get the compensation from the employeeServices
+            Debug.WriteLine(Ok(comp)); // For debug testing
             Debug.WriteLine(comp);
 
             return Ok(comp);
